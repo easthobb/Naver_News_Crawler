@@ -22,7 +22,7 @@ class Crawler(object):
         return (
             "https://search.naver.com/search.naver?&where=news&query="+
             self.search_word +
-            "&sm=tab_pge&sort=0&photo=0&field=0&reporter_article=&pd=3&"+
+            "&sm=tab_pge&sort=0&photo=0&field=0&reporter_article=&pd=4&"+
             "ds=" + self.start_period + "de=" + self.end_period +
             "&docid=&nso=so:r,p:" +
             "from"+ (self.start_period).replace('.','') + "to" + (self.end_period).replace('.','') +
@@ -116,8 +116,9 @@ class Crawler(object):
 
         ## 포털 검색창에서 URL 생성
         for i in range(10):
-            potal_URL = self.create_search_URL(1+i*0)
-            self.URL_list = self.URL_list + self.get_inner_links(potal_URL)
+            portal_URL = self.create_search_URL(1+i*0)
+            print("po ", portal_URL)
+            self.URL_list = self.URL_list + self.get_inner_links(portal_URL)
             if(len(self.URL_list)>=100):
                 break
         
