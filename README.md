@@ -10,9 +10,9 @@ basically, this crawler has a few terms.
 - 크롤링 결과물은 CSV file로 저장(UTF-8-SIG encoding)
 
 ## 사용
-'''
-python crawler.py
-'''
+
+    python crawler.py
+
 
 ## 실행
 ![run](https://user-images.githubusercontent.com/57410044/103840067-28a31f80-50d4-11eb-9896-83a603163cb5.png)
