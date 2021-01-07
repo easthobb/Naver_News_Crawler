@@ -16,5 +16,5 @@ python crawler.py
 
 ## 실행
 ![run](https://user-images.githubusercontent.com/57410044/103840067-28a31f80-50d4-11eb-9896-83a603163cb5.png)
-![result](images.githubusercontent.com/57410044/103840190-5e480880-50d4-11eb-9f87-67d5bf01de7c.png) 
+![result](https://user-images.githubusercontent.com/57410044/103840190-5e480880-50d4-11eb-9f87-67d5bf01de7c.png) 
 
