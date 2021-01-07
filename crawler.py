@@ -90,7 +90,7 @@ class Crawler(object):
         text_altered = str(text).replace(" ","")
         author = text_altered[text_altered.find("기자")-3:text_altered.find("기자")+2]
         
-        article = [str(title),str(time),str(text),str(press),str(author)]
+        article = [str(self.search_word),str(title),str(time),str(text),str(press),str(author)]
 
         return article
 
@@ -98,7 +98,7 @@ class Crawler(object):
 
         with open('./result.csv', 'w', encoding='utf-8-sig', newline='') as f: 
             writer = csv.writer(f) 
-            writer.writerow(['title','pub_time','article_text','press','author'])
+            writer.writerow(['key_word','title','pub_time','article_text','press','author'])
             for article in enumerate(article_list):
                 if(article[0]<=100):
                     writer.writerow(article[1],) 
@@ -117,7 +117,7 @@ class Crawler(object):
         ## 포털 검색창에서 URL 생성
         for i in range(10):
             portal_URL = self.create_search_URL(1+i*0)
-            print("po ", portal_URL)
+            print("requesting : ", portal_URL)
             self.URL_list = self.URL_list + self.get_inner_links(portal_URL)
             if(len(self.URL_list)>=100):
                 break
